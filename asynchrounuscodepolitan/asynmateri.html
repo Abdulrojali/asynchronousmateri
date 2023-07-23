@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="callstack">
+        <h1>callstack adalah kumpulan perintah didalam javascript browser</h1>
+    </div>
+    <div class="singletrade">
+        <h1>javascript adalah bahasa pemrograman singel trade</h1>
+        <p>yang artinya banyak perintah akan di jalankan satu satu </p>
+    </div>
+    <div class="callbackfunction">
+        <h1>callback function menggunakan setTimeout atau lain nya sangat tidak di sarankan</h1>
+    </div>
+    <div class="callback">
+        <h1>how to use callback function in javascript</h1>
+        <p>penggunaan callback function pada asyncrount tidak di rekomendasikan karena akan terjadi callback hell</p>
+    </div>
+    <div class="promise">
+        <h1>how to use promise in javascript</h1>
+        <p>promise adalah model asncrount js terbaru yang di rekomendasikan untuk di gunakan dalam mengambil api kedalam bagian javascript dom dan memudahkan programmer melakukan update </p>
+    </div>
+    <div class="perbedaan">
+        <!--perbedaan asyncrounus dengan syncronus-->
+        <h1>synchronus javascript</h1>
+        <p style="margin-bottom: 10px;">synchronous akan memblok proses eksekusi karena menunggu baris sebelumnya selesai</p>
+        <h1>asynchronus</h1>   
+        <p>pada konsep asynchronous, baris kode dapat dieksekusi segera meskipun baris kode sebelumnya belum selesai dieksekusi.</p>
+    </div>
+<script>
+    // console.log('muncul pertama');
+    // setTimeout(()=>{
+    //     console.log(`muncul ketiga karena nunggu 3 detik`);
+    // },1000)
+    // console.log('muncul kedua')
+
+    // callback function seperti ini sangat tidak di sarankan 
+    setTimeout(function(){
+       document.body.style.backgroundColor='red'
+           setTimeout(function(){
+       document.body.style.backgroundColor='green'
+           setTimeout(function(){
+       document.body.style.backgroundColor='blue'
+           setTimeout(function(){
+       document.body.style.backgroundColor='orange'
+    },1000)
+    },1000)
+    },1000)
+    },1000)
+</script>
+</body>
+</html>

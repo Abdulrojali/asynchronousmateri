@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>menggunakan asyn promise di javascript</h1>
+    <p>cara penggunaan promise pada javascript</p>
+    <div class="inputbtn">
+        <input type="number" class="text">
+        <button class="btn">submit</button>
+    </div>
+    <div class="outputbtn">
+
+    </div>
+    <script>
+        let btn=document.querySelector('.btn')
+        let outputbtn=document.querySelector('.outputbtn')
+        let text=document.querySelector('.text')
+
+        let number;
+        btn.addEventListener('click',function(){
+             number=parseInt(text.value)
+        })
+        let cekPing=(url)=>{
+            let myPing= new Promise(function(ready,err){
+                if(url>250){
+                    ready(`ready to use in ping ${url}ms`)
+                }
+                else{
+                    err(`not ready to use in ping ${url}ms`)
+                }
+            })
+        }
+        cekPing(number)
+
+    </script>
+</body>
+</html>

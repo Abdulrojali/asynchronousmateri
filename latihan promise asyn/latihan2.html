@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 25vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:10px ;
+            width: 50%;
+
+        }
+        .center input{
+            width: 50%;
+            height: 30px;
+            padding: 0 20px;
+            border: none;
+            border-bottom: 1px solid gray;
+        }
+        .center button{
+            display: inline-block;
+            width: 70px;
+            height: 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        .center button:hover{
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+                <input type="number" class="ping" placeholder="masukkan ping">
+                <button class="click">click</button>
+        </div>
+    </div>
+    <script src="latihan2.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .kontent{
+            display: flex;
+            gap: 8px;
+        }
+        .kontent input{
+            display: inline-block;
+            width: 400px;
+            height: 25px;
+            padding: 0 20px;
+            border: none;
+            border-bottom: 1px solid black;
+            border-radius: 5px;
+        }
+        .konten input:hover{
+            border: none;
+        }
+        .kontent button{
+            border: 1px solid gray;
+            display: inline-block;
+            width: 60px;
+            height: 25px;
+            border-radius: 5px;
+        }
+        .kontent button:hover{
+            background-color: aqua;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kontent">
+            <input type="text" name="input" id="" placeholder="masukkan ping">
+            <button class="click">click</button>
+        </div>
+        <div class="hasil">
+
+        </div>
+    </div>
+    <script>
+        let input=document.querySelector('div .kontent input')
+        let button=document.querySelector('.click')
+        let output=document.querySelector('.hasil')
+
+        button.addEventListener('click',function(){
+            let hasil=parseInt(input.value)
+            let result=new Promise((resolve,error)=>{
+                resolve(hasil)
+                 error(hasil)
+            })
+            result
+             .then((test)=>{
+                if(test>200){
+                    output.textContent=`success to accsess this game in your ping ${test}`
+                }
+                else{
+                    output.textContent=`sorry this ping not recommend to this game ${test}`
+                }
+        })
+    }) 
+        // result
+        //     .catch((err)=>{
+        //         if(err<200){
+        //             output.textContent=`sorry this ping not recommend to this game ${err}`
+        //         }
+        //     })
+      
+    // else{
+                //      output.textContent=`wrong this ping ${err} not recommend to this game !!` 
+                //   }
+        //     // contoh pertama
+        //     let result=new Promise((recovery,error)=>{
+        //        if(hasil>'200'){
+        //            recovery=alert(`success to accsess this game!!`)
+        //            output.innerHTML=recovery.value
+        //        }
+        //        else{
+        //            error=alert(`wrong your ping ${hasil}is not recommend!!`)
+        //            output.innerHTML=error.value
+        //        }
+        //    })
+</script>
+</body>
+</html>

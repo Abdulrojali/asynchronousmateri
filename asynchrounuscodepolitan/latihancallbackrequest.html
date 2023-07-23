@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="callback">
+        <h1>how to use callback function in javascript</h1>
+        <p>penggunaan callback function pada asyncrount tidak di rekomendasikan karena akan terjadi callback hell</p>
+    </div>
+    <div class="promise">
+        <h1>how to use promise in javascript</h1>
+        <p>promise adalah model asncrount js terbaru yang di rekomendasikan untuk di gunakan dalam mengambil api kedalam bagian javascript dom dan memudahkan programmer melakukan update </p>
+    </div>
+    <script>
+
+        // ini adalah contoh callback hell 
+        // function request(url,succses,fail){
+        //     let ping= Math.floor(Math.random()*1000)+500;
+        //     setTimeout(()=>{
+        //         if(ping>3000){
+        //             fail('wrong this error!!')
+        //         }
+        //         else{
+        //             succses(`sukses ${url}, ping : ${ping}ms`)
+        //         }
+        //     },2000)
+        // }
+
+        // request(
+        //     'anime.com',
+        //     function(respone){
+        //         console.log(`sukses ${respone}`)
+        //         request(
+        //     'anime.com',
+        //     function(respone){
+        //         console.log(`sukses ${respone}`)
+        //         request(
+        //     'anime.com',
+        //     function(respone){
+        //         console.log(`sukses ${respone}`)
+        //         request(
+        //     'anime.com',
+        //     function(respone){
+        //         console.log(`sukses ${respone}`)
+        //     },
+        //     function(error){
+        //         console.log(`error ${error}`)
+        //     }
+        //     )
+        //     },
+        //     function(error){
+        //         console.log(`error ${error}`)
+        //     }
+        //     )
+        //     },
+        //     function(error){
+        //         console.log(`error ${error}`)
+        //     }
+        //     )
+        //     },
+        //     function(error){
+        //         console.log(`error ${error}`)
+        //     })
+
+
+            // penggunaan promise
+            // function linkRequest(link,sukses,err){
+            //     setTimeout(() => {
+            //         let ping= Math.floor(Math.random()*2000)+300
+            //         if(ping>2000){
+            //             sukses(`sukses in ping : ${ping}ms`)
+            //         }
+            //         else{
+            //             err(`error in ping : ${ping}ms`)
+            //         }
+            //     }, 2500);
+            // }
+            // linkRequest(
+            //     'tokopedia.com',
+            //     function(respond){
+            //         console.log(respond)
+            //     },
+            //     function(error){
+            //         console.log(error)
+            //     }
+            // )
+    </script>
+</body>
+</html>

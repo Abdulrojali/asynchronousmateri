@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let input=prompt('masukkan username anda :')
+        let pass=prompt('masukkan username anda :')
+        const data=(input,pass)=>{
+            return new Promise((sukses,failed)=>{
+                setTimeout(()=>{
+                    if(data==''||pass==''){
+                        failed('error data not undifend')
+                    }
+                    else{
+                        sukses(`data sukses username:${input}, password :${pass}`)
+                    }
+                },1000)
+            })
+        }
+        async function z(){
+            await data(input,pass)        
+        .then((respone)=>console.log(`${respone}, status : sukses`))
+        .catch((res)=>console.log(`${res}, status : failed`))
+        }
+        z()
+
+    </script>
+</body>
+</html>
